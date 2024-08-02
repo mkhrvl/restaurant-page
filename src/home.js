@@ -1,4 +1,5 @@
 import pizza from './pizza.png';
+import { navLinkClickHandler } from './index.js';
 
 export default function Home() {
     const container = document.createElement('section');
@@ -20,7 +21,9 @@ export default function Home() {
 
     const cta = document.createElement('button');
     cta.classList.add('home__cta');
+    cta.setAttribute('data-id', 'nav-menu');
     cta.textContent = 'See Menu';
+    cta.addEventListener('click', navLinkClickHandler);
     content.appendChild(cta);
 
     container.appendChild(content);

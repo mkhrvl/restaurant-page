@@ -5,33 +5,44 @@ import './style.css';
 
 Home();
 
-const navLinks = document.querySelectorAll('.nav__link');
-navLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-        const id = e.target.id;
+const refreshScreen = () => {
+    const content = document.querySelector('#content');
+    content.replaceChildren('');
 
-        const content = document.querySelector('#content');
-        content.replaceChildren('');
-
-        navLinks.forEach((link) => {
-            link.classList.remove('nav__link-active');
-        });
-
-        switch (id) {
-            case 'nav-home':
-                Home();
-                break;
-            case 'nav-menu':
-                Menu();
-                break;
-            case 'nav-about':
-                About();
-                break;
-        }
-
-        e.target.classList.add('nav__link-active');
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach((link) => {
+        link.classList.remove('nav__link-active');
     });
-});
+};
+
+const navHome = document.querySelector('#nav-home');
+const navMenu = document.querySelector('#nav-menu');
+const navAbout = document.querySelector('#nav-about');
+
+export function navLinkClickHandler(e) {
+    refreshScreen();
+
+    const page = e.target.id || e.target.dataset.id;
+
+    switch (page) {
+        case 'nav-home':
+            Home();
+            navHome.classList.add('nav__link-active');
+            break;
+        case 'nav-menu':
+            Menu();
+            navMenu.classList.add('nav__link-active');
+            break;
+        case 'nav-about':
+            About();
+            navAbout.classList.add('nav__link-active');
+            break;
+    }
+}
+
+navHome.addEventListener('click', navLinkClickHandler);
+navMenu.addEventListener('click', navLinkClickHandler);
+navAbout.addEventListener('click', navLinkClickHandler);
 
 const copyright = document.querySelector('.footer__copyright');
 const currentYear = new Date().getFullYear();
