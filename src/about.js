@@ -46,4 +46,8 @@ export default function About() {
 
     const wrapper = document.querySelector('#content');
     wrapper.appendChild(container);
+
+    setTimeout(() => {
+        container.classList.add('visible');
+    }, 100);
 }
