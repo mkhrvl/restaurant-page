@@ -57,8 +57,10 @@ h6 {
     --w-page: 100em;
     --h-header: 10svh;
     --clr-off-white: #fffaf1;
+    --clr-off-light-white: #fffdf9;
     --clr-maroon: #803d3b;
     --clr-dark-brown: #322c2b;
+    --border-radius: 8px;
 }
 
 body {
@@ -107,6 +109,10 @@ body {
 .nav__link:hover {
     color: #af8260;
     cursor: pointer;
+}
+
+.nav__link-active {
+    color: var(--clr-maroon);
 }
 
 #content {
@@ -170,6 +176,69 @@ body {
 
 .home__img:hover {
     transform: scale(1.025);
+}
+
+/* Menu */
+
+.menu {
+    padding: 2rem;
+}
+
+.menu__filipino,
+.menu__classic {
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.menu__header {
+    color: var(--clr-maroon);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.menu__container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.menu__card {
+    background-color: var(--clr-off-light-white);
+    border-radius: var(--border-radius);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-flow: column nowrap;
+    width: 260px;
+}
+
+.menu__card-img {
+    align-items: center;
+    background-color: var(--clr-dark-brown);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    color: var(--clr-off-light-white);
+    display: flex;
+    font-size: 0.8rem;
+    height: 200px;
+    justify-content: center;
+}
+
+.menu__card-content {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.menu__card-header {
+    color: var(--clr-dark-brown);
+    font-size: 1.15rem;
+}
+
+.menu__card-desc {
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 /* Footer */
