@@ -142,9 +142,10 @@ body {
     display: grid;
     gap: 6rem;
     grid-template-columns: 2fr 3fr;
-    height: fit-content;
     padding: 3rem 0;
     width: var(--w-page);
+    align-content: center;
+    margin-bottom: 10vh;
 }
 
 .home__content {
