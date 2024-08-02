@@ -59,6 +59,9 @@ h6 {
     --clr-off-white: #fffaf1;
     --clr-off-light-white: #fffdf9;
     --clr-maroon: #803d3b;
+    --clr-light-maroon: #b28a89;
+    --clr-brown: #af8260;
+    --clr-light-brown: #c7a78f;
     --clr-dark-brown: #322c2b;
     --border-radius: 8px;
 }
@@ -106,7 +109,7 @@ body {
 }
 
 .nav__link:hover {
-    color: #af8260;
+    color: var(--clr-brown);
     cursor: pointer;
 }
 
@@ -317,7 +320,7 @@ body {
 .about-us > .about__header::before,
 .story > .about__header::before,
 .mission > .about__header::before {
-    background-color: #c7a78f;
+    background-color: var(--clr-light-brown);
     content: '';
     height: 50%;
     left: -5%;
@@ -328,7 +331,7 @@ body {
 }
 
 .story > .about__header::before {
-    background-color: #b28a89;
+    background-color: var(--clr-light-maroon);
     left: 5%;
 }
 
