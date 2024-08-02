@@ -20,13 +20,13 @@ navLinks.forEach((link) => {
         switch (id) {
             case 'nav-home':
                 Home();
-                e.target.classList.add('nav__link-active');
                 break;
             case 'nav-menu':
                 Menu();
-                e.target.classList.add('nav__link-active');
                 break;
         }
+
+        e.target.classList.add('nav__link-active');
     });
 });
 
