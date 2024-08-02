@@ -146,7 +146,7 @@ body {
 }
 
 .home__desc {
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -155,7 +155,6 @@ body {
     border: 1px solid var(--clr-dark-brown);
     color: var(--clr-off-white);
     font-size: 1.25rem;
-    font-weight: 600;
     justify-self: start;
     padding: 0.25em 1.15em;
     transition: all 250ms ease-in-out;
