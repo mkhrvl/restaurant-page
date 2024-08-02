@@ -1,10 +1,10 @@
 import pizza from './pizza.png';
 
 export default function Home() {
-    const container = document.createElement('div');
+    const container = document.createElement('section');
     container.classList.add('home');
 
-    const content = document.createElement('div');
+    const content = document.createElement('section');
     content.classList.add('home__content');
 
     const tagline = document.createElement('h2');
