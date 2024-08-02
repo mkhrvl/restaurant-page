@@ -208,6 +208,11 @@ body {
     display: flex;
     flex-flow: column nowrap;
     width: 260px;
+    transition: transform 250ms ease-in-out;
+}
+
+.menu__card:hover {
+    transform: translateY(-10px);
 }
 
 .menu__card-img {
@@ -238,6 +243,8 @@ body {
     font-size: 0.8rem;
     text-align: center;
 }
+
+/* About */
 
 /* Footer */
 
