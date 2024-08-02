@@ -246,6 +246,85 @@ body {
 
 /* About */
 
+.about {
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    width: var(--w-page);
+}
+
+.about-us,
+.story,
+.mission {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: auto 1fr;
+    justify-self: left;
+}
+
+.story {
+    grid-template-columns: 1fr auto;
+    justify-self: right;
+}
+
+.story > .about__header {
+    grid-area: 1 / 2;
+}
+
+.about__header {
+    align-self: start;
+    color: var(--clr-dark-brown);
+    font-size: 5rem;
+    line-height: 1;
+    position: relative;
+}
+
+.about-us > .about__header::before,
+.story > .about__header::before,
+.mission > .about__header::before {
+    background-color: #c7a78f;
+    content: '';
+    height: 50%;
+    left: -5%;
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    z-index: -1;
+}
+
+.story > .about__header::before {
+    background-color: #b28a89;
+    left: 5%;
+}
+
+.about__body {
+    font-size: 0.9rem;
+    max-width: 70ch;
+}
+
+@media (max-width: 1000px) {
+    .about {
+        gap: 4rem;
+        justify-content: center;
+    }
+
+    .about-us,
+    .story,
+    .mission {
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    .story > .about__header {
+        grid-area: 1 / 1;
+    }
+
+    .story > .about__header::before {
+        left: -5%;
+    }
+}
+
 /* Footer */
 
 .footer {

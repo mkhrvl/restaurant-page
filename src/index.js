@@ -1,9 +1,9 @@
 import Home from './home.js';
 import Menu from './menu.js';
+import About from './about.js';
 import './style.css';
 
-// Home();
-Menu();
+Home();
 
 const navLinks = document.querySelectorAll('.nav__link');
 navLinks.forEach((link) => {
@@ -23,6 +23,9 @@ navLinks.forEach((link) => {
                 break;
             case 'nav-menu':
                 Menu();
+                break;
+            case 'nav-about':
+                About();
                 break;
         }
 
