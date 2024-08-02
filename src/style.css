@@ -190,8 +190,8 @@ body {
 
 @media (max-width: 1000px) {
     .home {
-        grid-template-columns: 1fr;
         gap: 0;
+        grid-template-columns: 1fr;
         padding-top: 0;
     }
 
@@ -205,8 +205,8 @@ body {
 
     .home__img {
         grid-area: 1 / 1;
-        padding: 0 4rem;
         margin-bottom: 2rem;
+        padding: 0 4rem;
     }
 }
 
@@ -241,8 +241,8 @@ body {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-flow: column nowrap;
-    width: 260px;
     transition: transform 250ms ease-in-out;
+    width: 260px;
 }
 
 .menu__card:hover {
@@ -264,8 +264,8 @@ body {
 .menu__card-content {
     display: grid;
     gap: 0.5rem;
+    margin-bottom: 1rem;
     padding: 1rem 1.5rem;
-    padding-bottom: 2rem;
 }
 
 .menu__card-header {
