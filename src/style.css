@@ -176,6 +176,28 @@ body {
     transform: scale(1.025);
 }
 
+@media (max-width: 1000px) {
+    .home {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: 0;
+    }
+
+    .home__content {
+        text-align: center;
+    }
+
+    .home__cta {
+        justify-self: center;
+    }
+
+    .home__img {
+        grid-area: 1 / 1;
+        padding: 0 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
 /* Menu */
 
 .menu {
